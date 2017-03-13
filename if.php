@@ -11,7 +11,7 @@ if ($a < $b) {
 
 if ($b > $a) {
     // TODO: Replace the blanks with the correct description
-    echo "$b is greater $a\n";
+    echo "$b is greater than $a\n";
 }
 
 if ($b >= $c) {
@@ -26,7 +26,7 @@ if ($b <= $c) {
 
 if ($b == $c) {
     // TODO: Replace the blanks with the correct description
-    echo "$b has the value of '{$c}'\n";
+    echo "$b has the equal to '{$c}'\n";
 }
 
 if ($b === $c) {
