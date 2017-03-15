@@ -19,7 +19,14 @@ foreach ($things as $thing) {
 	} elseif (is_string($thing)) {
 		echo "{$thing} is a string." . PHP_EOL;
 	}
-	
+}
+
+foreach ($things as $thing) {
+
+	if (is_scalar($thing)) {
+		echo "{$thing} is scalar." . PHP_EOL;
+
+	}
 }
 
 ?>
