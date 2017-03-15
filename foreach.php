@@ -29,4 +29,18 @@ foreach ($things as $thing) {
 	}
 }
 
+
+foreach ($things as $thing) {
+
+	if (is_array($thing)) {
+		foreach($thing as $array) {
+			echo $array . PHP_EOL;
+
+		}
+		
+	} else {
+		echo $thing . PHP_EOL;
+	}
+}
+
 ?>
