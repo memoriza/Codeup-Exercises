@@ -7,8 +7,8 @@ fwrite(STDOUT, "Enter the end of the range");
 $end = trim(fgets(STDIN));
 
 for ($i = $start; $i <= $end; $i++) {
-	echo $i, PHP_EOL;
+	if ($i % 2 === 0) {echo $i, PHP_EOL;
+	}
 }
-
 
 ?>	
