@@ -29,14 +29,17 @@ foreach ($things as $thing) {
 	}
 }
 
-
 foreach ($things as $thing) {
 
 	if (is_array($thing)) {
+
+		echo "Array (";
+
 		foreach($thing as $array) {
-			echo $array . PHP_EOL;
+			 echo "$array" , " ";
 
 		}
+		echo ") " . PHP_EOL;
 		
 	} else {
 		echo $thing . PHP_EOL;
