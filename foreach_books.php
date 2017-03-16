@@ -34,8 +34,8 @@ foreach ($books as $title => $array) {
 
 		foreach ($array as $keytwo => $value) {
 		echo "$keytwo: $value" . PHP_EOL; 
-
 		}
+		
 	}
 
 }
