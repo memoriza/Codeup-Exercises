@@ -28,12 +28,12 @@ foreach ($books as $title => $array) {
 
 	if ($array['published'] >= 1950) {
 		echo ($title) . PHP_EOL;
-		}
+	}
 
 	if ($array['published'] >= 1950) {
 
-		foreach ($array as $keytwo => $value) {
-		echo "$keytwo: $value" . PHP_EOL; 
+		foreach ($array as $bookInfo => $bookValue) {
+			echo  "\t $bookInfo: $bookValue" . PHP_EOL; 
 		}
 		
 	}
