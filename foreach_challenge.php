@@ -56,6 +56,8 @@ $states = [
 			    'WY' => 'Wyoming'
 			  ];
 
+echo "States with an 'x' in them" . PHP_EOL;
+
 foreach ($states as $abrv => $state ) {
 
 	$pos = strrpos($state, "x");
@@ -65,14 +67,51 @@ foreach ($states as $abrv => $state ) {
 	}
 }
 
+echo "States without an 'a' in them" . PHP_EOL;
+
 foreach ($states as $abrv => $state ) {
 
 	$pos = strrpos($state, "a");
 		
 	if ($pos == false) {
-			echo "$abrv : $state" . PHP_EOL;
+		echo "$abrv : $state" . PHP_EOL;
 	}
 }
+
+echo "States with vowels in the beginning of their name" . PHP_EOL;
+
+foreach ($states as $abrv => $state ) {
+
+	$vowels = ["A","E","I","O","U"];
+
+	$pos = in_array($state[0], $vowels ,true);
+				
+	if ($pos == true) {
+		echo "$abrv : $state" . PHP_EOL;
+	}
+}
+
+echo "States with vowels at the beginning and end of the state name" . PHP_EOL;
+
+foreach ($states as $abrv => $state) {
+
+	$upperVowels = ["A","E","I","O","U"];
+	$lowerVowels = ["a","e","i","o","u"];
+
+	$statesStartingAndEndingWithVowels = [];
+
+	if (in_array($state{0}, $upperVowels ,true) && in_array(substr($state, -1), $lowerVowels)) {
+
+		array_push($statesStartingAndEndingWithVowels, $state);
+		
+	}
+
+	foreach ($statesStartingAndEndingWithVowels as $svowels) {
+		echo($svowels) . PHP_EOL;
+	}
+}
+
+
 
 
 
