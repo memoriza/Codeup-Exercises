@@ -56,13 +56,24 @@ $states = [
 			    'WY' => 'Wyoming'
 			  ];
 
-	foreach ($states as $abrv => $state ) {
+foreach ($states as $abrv => $state ) {
 
-		$pos = strrpos($state, "x");
+	$pos = strrpos($state, "x");
 		
-		if ($pos == true) {
+	if ($pos == true) {
 			echo "$abrv : $state" . PHP_EOL;
-		}
 	}
+}
+
+foreach ($states as $abrv => $state ) {
+
+	$pos = strrpos($state, "a");
+		
+	if ($pos == false) {
+			echo "$abrv : $state" . PHP_EOL;
+	}
+}
+
+
 
 ?>
