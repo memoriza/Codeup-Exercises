@@ -111,8 +111,4 @@ foreach ($states as $abrv => $state) {
 	}
 }
 
-
-
-
-
 ?>
