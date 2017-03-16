@@ -23,17 +23,17 @@ $books = array(
     )
 );
 
-foreach ($books as $keyone => $valueone) {
+foreach ($books as $title => $array) {
 
 
-	if ($valueone['published'] >= 1950) {
-		echo ($keyone) . PHP_EOL;
+	if ($array['published'] >= 1950) {
+		echo ($title) . PHP_EOL;
 		}
 
-	if ($valueone['published'] >= 1950) {
+	if ($array['published'] >= 1950) {
 
-		foreach ($valueone as $key => $value) {
-		echo "$key: $value" . PHP_EOL; 
+		foreach ($array as $keytwo => $value) {
+		echo "$keytwo: $value" . PHP_EOL; 
 
 		}
 	}
