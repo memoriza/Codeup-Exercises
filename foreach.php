@@ -39,6 +39,7 @@ foreach ($things as $thing) {
 			 echo "$array" , " ";
 
 		}
+		
 		echo ") " . PHP_EOL;
 		
 	} else {
