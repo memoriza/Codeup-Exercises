@@ -24,11 +24,21 @@ $books = array(
 );
 
 foreach ($books as $keyone => $valueone) {
-	echo ($keyone) . PHP_EOL;
-	foreach ($valueone as $key => $value) {
+
+
+	if ($valueone['published'] >= 1950) {
+		echo ($keyone) . PHP_EOL;
+		}
+
+	if ($valueone['published'] >= 1950) {
+
+		foreach ($valueone as $key => $value) {
 		echo "$key: $value" . PHP_EOL; 
+
+		}
 	}
 
 }
+
 
 ?>
