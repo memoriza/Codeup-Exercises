@@ -6,7 +6,7 @@ function add($a, $b) {
     if (is_numeric($a) == true || is_numeric($b) == true) {
     	return $a + $b;
 	} else {
-		echo "Error! Input numeric values for function parameters not $a or $b";
+		echo "Error! Input numeric values for function parameters not $a and $b";
 	}
 }
 
@@ -15,7 +15,7 @@ function subtract($a, $b) {
 	if (is_numeric($a) == true || is_numeric($b) == true) {
     	return $a - $b;
 	} else {
-		echo "Error! Input numeric values for function parameters not $a or $b";
+		echo "Error! Input numeric values for function parameters not $a and $b";
 	}
     
 }
@@ -25,14 +25,14 @@ function multiply($a, $b) {
 	if (is_numeric($a) == true || is_numeric($b) == true) {
     	return $a * $b;
 	} else {
-		return "Error! Input numeric values for function parameters not $a or $b";
+		return "Error! Input numeric values for function parameters not $a and $b";
 	}
 }
 
 function divide($a, $b) {
 
     if (!is_numeric($a)  || !is_numeric($b) ) {
-    	return "Error! Input numeric values for function parameters not $a or $b";
+    	return "Error! Input numeric values for function parameters not $a and $b";
 	} elseif ($b == 0) {
 		return "Error! Input non-zero numeric values as parameters";
 	} else {
@@ -45,7 +45,7 @@ function modulus($a, $b) {
 	if (is_numeric($a) == true || is_numeric($b) == true) {
     	return $a % $b;
 	} else {
-		return "Error! Input numeric values for function parameters not $a or $b";
+		return "Error! Input numeric values for function parameters not $a and $b";
 	}
 }
 
