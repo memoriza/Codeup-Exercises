@@ -106,9 +106,43 @@ foreach ($states as $abrv => $state) {
 		
 	}
 
-	foreach ($statesStartingAndEndingWithVowels as $svowels) {
-		echo($svowels) . PHP_EOL;
+	foreach ($statesStartingAndEndingWithVowels as $stateVowels) {
+		echo($stateVowels) . PHP_EOL;
 	}
+}
+
+echo "States with names with more than one word" . PHP_EOL;
+
+$statesWithMoreThanOneWord = [];
+
+foreach ($states as $abrv => $state) {
+
+	if (strpos($state, " ") !== false ) {
+
+		array_push($statesWithMoreThanOneWord, $state);
+	}
+
+}
+
+foreach ($statesWithMoreThanOneWord as $stateWords) {
+
+	echo $stateWords . PHP_EOL;
+}
+
+echo "States with Cardinal directions in them" . PHP_EOL;
+
+$stateCardinals = [];
+
+$cardinals = ["North","East","West","South"];
+
+foreach ($states as $abrv => $state) {
+
+	if (strstr($state, "North") !== false || strstr($state, "South") !== false || strstr($state, "West") !== false || strstr($state, "East") !== false) {
+		array_push($stateCardinals, $state);
+	}
+}
+foreach ($stateCardinals as $sC) {
+	echo $sC . PHP_EOL;
 }
 
 ?>
