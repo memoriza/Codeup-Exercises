@@ -34,7 +34,7 @@ switch($dayOfWeek) {
     	echo "Today is Sunday" . PHP_EOL;
     	break;
 
- }
+}
 
 if ($dayOfWeek == 1) {
 	echo "Today is Monday" . PHP_EOL;
