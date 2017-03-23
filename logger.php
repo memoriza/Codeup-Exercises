@@ -1,9 +1,10 @@
 <?php
 
+function logMessage($logLevel, $message) {
 
+	$time = date("Y-m-d");
 
-function logMessage($logLevel, $message, $filename = "log-YYYY-MM-DD.log") {
-
+	$filename = "log-" . "$time.log";
 
 	$handle = fopen($filename, "a");
 
@@ -22,7 +23,7 @@ function logInfo() {
 	logMessage(" INFO", " This is an info message.") . PHP_EOL;
 }
 
-function logError () {
+function logError() {
 	logMessage(" ERROR", " This is an info message.") . PHP_EOL;
 }
 
