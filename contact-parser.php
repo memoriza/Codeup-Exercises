@@ -12,6 +12,7 @@ function parseContacts() {
     $handle = fopen($filename, "r");
     $contents = fread($handle, filesize($filename));
   	$contents = trim($contents);
+  	fclose($handle);
     $contacts = explode("\n", $contents);
     $finalArray = [];
 
@@ -35,12 +36,12 @@ function parseContacts() {
 
     }
 
-    fclose($handle);
+  
 	return($finalArray); 
 	
 }
 
-var_dump(parseContacts());
+print_r(parseContacts());
 
 
 
