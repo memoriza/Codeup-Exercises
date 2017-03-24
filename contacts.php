@@ -2,6 +2,7 @@
 
 function runMainMenu () { 
 
+    overheadDisplay();
     contactsToString(fileReadAndDisplay());
 
 	fwrite(STDOUT, "Hello. Choose option 1-5. \n 1) View Contacts \n 2) Add a New Contact \n 3) Search a Contact by Name \n 4) Delete an Existing Contact \n 5) Exit ") . PHP_EOL;
@@ -43,6 +44,14 @@ function runMainMenu () {
         }
 
     }
+
+}
+
+function overheadDisplay () {
+
+    echo "---------------------------" . PHP_EOL;
+    echo "------CONTACT MANAGER------" . PHP_EOL;
+    echo "---------------------------" . PHP_EOL;
 
 }
 
@@ -170,8 +179,6 @@ function deleteContact() {
     if ($message == false) {
         echo "search result not found";
     }
-
-        // delete
 
     if ($contactFound == true) {
 
