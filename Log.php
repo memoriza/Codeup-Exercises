@@ -4,28 +4,33 @@ class Log {
     
     public $filename;
 
-    function logMessage($logLevel, $message){
+    public function __construct($prefix = "log") {
+        $this ->filename = $prefix . "-" . date("Y-m-d") . ".log";
+        $this ->handle = fopen($this->filename, 'a');
 
-        $time = date("Y-m-d");
-    
-        $filename = "log-" . $time . ".log";
+    }
+
+    public function logMessage($logLevel, $message){
+
     
         $hours = date("Y-m-d") . " " . date("h:i:s") . PHP_EOL;
         
         $handle = fopen($this->filename, 'a');
     
         fwrite($handle, $hours . $logLevel . " " . $message);
-    
-        fclose($handle);
 
     }
 
-    function info($message){
+    public function info($message){
         $this->logMessage("INFO", $message . PHP_EOL);
     }
     
-    function error($message){
+    public function error($message){
         $this->logMessage("ERROR", $message . PHP_EOL);
+    }
+
+    public function __destruct() {
+        fclose($this ->handle);
     }
 
 }

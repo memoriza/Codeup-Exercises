@@ -6,8 +6,8 @@ $log = new Log();
 
 $log->filename = "log-" . date("Y-m-d") . ".log";
 
-$log->info("Message logged.") . PHP_EOL;
+$captainsLog = new Log("captainslog");
 
-$log->error("You have an error.") . PHP_EOL;
+$captainsLog->info("STARDATES BITCH.") . PHP_EOL;
 
 ?>
