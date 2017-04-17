@@ -2,16 +2,24 @@
 
 class Log {
     
-    public $filename;
+    private $filename;
+    private $handle;
 
     public function __construct($prefix = "log") {
-        $this ->filename = $prefix . "-" . date("Y-m-d") . ".log";
-        $this ->handle = fopen($this->filename, 'a');
+        $this->setFilename($prefix);
+        $this->handle = fopen($this->filename, 'a');
 
     }
 
-    public function logMessage($logLevel, $message){
+    private function setFilename($prefix) {
 
+        $this->filename = $prefix . "-" . date("Y-m-d") . ".log";
+
+    }
+
+    
+
+    public function logMessage($logLevel, $message){
     
         $hours = date("Y-m-d") . " " . date("h:i:s") . PHP_EOL;
         
