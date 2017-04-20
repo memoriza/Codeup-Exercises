@@ -18,8 +18,7 @@ class Log {
     }
 
     
-
-    public function logMessage($logLevel, $message){
+        public function logMessage($logLevel, $message){
     
         $hours = date("Y-m-d") . " " . date("h:i:s") . PHP_EOL;
         
